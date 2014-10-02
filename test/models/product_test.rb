@@ -19,15 +19,15 @@ class ProductTest < ActiveSupport::TestCase
       image_url: "chatka.jpg")
     product.price = -1
     assert product.invalid?
-    assert_equal ["must be greater than or equal to 0.01"], product.errors[:price]
+    assert_equal ["should be positive."], product.errors[:price]
 
     product.price = 0
     assert product.invalid?
-    assert_equal ["must be greater than or equal to 0.01"], product.errors[:price]
+    assert_equal ["should be positive."], product.errors[:price]
 
     product.price = 0.001
     assert product.invalid?
-    assert_equal ["must be greater than or equal to 0.01"], product.errors[:price]
+    assert_equal ["should be positive."], product.errors[:price]
 
     product.price = 0.01
     assert product.valid?
