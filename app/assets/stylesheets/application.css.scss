@@ -50,6 +50,7 @@
     padding: 1em 2em;
     width: 13em;
     background: #141;
+    position: relative;
 
     ul {
       padding: 0;
@@ -60,6 +61,12 @@
           font-size: small;
         }
       }
+    }
+    #time {
+      color: #bfb;
+      font-weight: bold;
+      position: absolute;
+      bottom: 0;
     }
   }
 
