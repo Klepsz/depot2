@@ -32,7 +32,11 @@
     }
 
     p, div.price_line {
-      margin: 0 0 2px 100px;
+      margin: 0.5em 0 0.8em 100px;
+
+      form, div {
+        display: inline;
+      }
     }
 
     .price {
