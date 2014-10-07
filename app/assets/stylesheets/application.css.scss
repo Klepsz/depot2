@@ -25,6 +25,13 @@
   img {
     float: left;
   }
+
+  #counter {
+    display: inline;
+    float: right;
+    font: small-caps 20px/20px "Times New Roman", serif;
+    padding: 10px;
+  }
  }
 
  #notice {

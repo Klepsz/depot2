@@ -10,6 +10,7 @@
   <div id="banner">
     <%= image_tag("logo.png") %>
     <%= @page_title || "Pragmatic Bookshelf" %>
+    <div id="counter">It is <%= pluralize(@visit_count, "visit") %> so far.</div>
   </div>
 
   <div id="columns">
