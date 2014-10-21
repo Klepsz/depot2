@@ -16,6 +16,10 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
+    if @cart.line_items.empty?
+      redirect_to store_url, notice: "Your cart is empty"
+      return  #bez tego by był double render error bo controller by chciał wyrenderować i przekierować. Chyba.
+    end
     @order = Order.new
   end
 
