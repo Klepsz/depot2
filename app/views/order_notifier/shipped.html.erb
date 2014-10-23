@@ -1,5 +1,7 @@
-<h1>OrderNotifier#shipped</h1>
+<h3>Pragmatic Order Shipped</h3>
+<p>This is just to let you know that we've shipped your recent order:</p>
 
-<p>
-  <%= @greeting %>, find me in app/views/order_notifier/shipped.html.erb
-</p>
+<table>
+  <tr><th colspan="2">Qty</th><th>Description</th></tr>
+<%= render @order.line_items -%>
+</table>
